@@ -1,5 +1,7 @@
 # 🐉 Dungeons & Dragons: Web Adventure
 
+<img src="https://raw.githubusercontent.com/nudelx/dnd-web-game/refs/heads/main/src/assets/demo.png">
+
 A browser-based D&D game featuring character creation, combat, spellcasting, and dungeon exploration!
 
 ## 🎮 How to Play

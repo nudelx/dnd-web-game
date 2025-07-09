@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const InventorySection = ({
   showInventory,
@@ -7,29 +8,37 @@ const InventorySection = ({
   onConsumeItem,
   onCloseInventory,
 }) => {
+  const { t } = useTranslation();
+
   if (!showInventory) return null;
 
   return (
     <div className="inventory-section">
-      <h3>Inventory</h3>
+      <h3>{t("inventory.title")}</h3>
       {inventory.map((item, index) => (
         <div key={index} className="inventory-item">
           <div className="item-info">
             <span className="item-name">{item.name}</span>
             {item.type === "weapon" && (
-              <span className="item-details">Damage: {item.damage}</span>
+              <span className="item-details">
+                {t("inventory.itemTypes.weapon", { damage: item.damage })}
+              </span>
             )}
             {item.type === "armor" && (
-              <span className="item-details">AC: {item.ac}</span>
+              <span className="item-details">
+                {t("inventory.itemTypes.armor", { ac: item.ac })}
+              </span>
             )}
             {item.type === "consumable" && (
-              <span className="item-details">Consumable</span>
+              <span className="item-details">
+                {t("inventory.itemTypes.consumable")}
+              </span>
             )}
           </div>
           <div className="item-actions">
             {(item.type === "weapon" || item.type === "armor") && (
               <button className="equip-btn" onClick={() => onEquipItem(item)}>
-                Equip
+                {t("inventory.equip")}
               </button>
             )}
             {item.type === "consumable" && (
@@ -37,7 +46,7 @@ const InventorySection = ({
                 className="use-btn"
                 onClick={() => onConsumeItem(item, index)}
               >
-                Use
+                {t("inventory.use")}
               </button>
             )}
           </div>
@@ -58,7 +67,7 @@ const InventorySection = ({
           width: "100%",
         }}
       >
-        Close Inventory
+        {t("inventory.closeInventory")}
       </button>
     </div>
   );

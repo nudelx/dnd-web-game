@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { getModifier } from "../functions/utils";
 
 const CharacterSheet = ({
@@ -7,18 +8,21 @@ const CharacterSheet = ({
   levelUpMessage,
   onClearSave,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="character-sheet">
-      <h3>Character Sheet</h3>
+      <h3>{t("characterSheet.title")}</h3>
       <div className="character-info">
         <strong>{character.name}</strong> the {character.race} {character.class}
       </div>
       <div className="character-info">
-        Level {character.level} • XP: {character.experience}
+        {t("characterSheet.level")} {character.level} • {t("characterSheet.xp")}
+        : {character.experience}
       </div>
       <div className="character-info">
         <div>
-          HP: {character.hp}/{character.maxHp}
+          {t("characterSheet.hp")}: {character.hp}/{character.maxHp}
         </div>
         <div className="health-bar">
           <div
@@ -36,7 +40,7 @@ const CharacterSheet = ({
 
       <div className="character-stats">
         <div className="stat">
-          <div>STR</div>
+          <div>{t("stats.str")}</div>
           <div className="stat-value">{character.stats.str}</div>
           <div>
             ({getModifier(character.stats.str) >= 0 ? "+" : ""}
@@ -44,7 +48,7 @@ const CharacterSheet = ({
           </div>
         </div>
         <div className="stat">
-          <div>DEX</div>
+          <div>{t("stats.dex")}</div>
           <div className="stat-value">{character.stats.dex}</div>
           <div>
             ({getModifier(character.stats.dex) >= 0 ? "+" : ""}
@@ -52,7 +56,7 @@ const CharacterSheet = ({
           </div>
         </div>
         <div className="stat">
-          <div>CON</div>
+          <div>{t("stats.con")}</div>
           <div className="stat-value">{character.stats.con}</div>
           <div>
             ({getModifier(character.stats.con) >= 0 ? "+" : ""}
@@ -60,7 +64,7 @@ const CharacterSheet = ({
           </div>
         </div>
         <div className="stat">
-          <div>INT</div>
+          <div>{t("stats.int")}</div>
           <div className="stat-value">{character.stats.int}</div>
           <div>
             ({getModifier(character.stats.int) >= 0 ? "+" : ""}
@@ -68,7 +72,7 @@ const CharacterSheet = ({
           </div>
         </div>
         <div className="stat">
-          <div>WIS</div>
+          <div>{t("stats.wis")}</div>
           <div className="stat-value">{character.stats.wis}</div>
           <div>
             ({getModifier(character.stats.wis) >= 0 ? "+" : ""}
@@ -76,7 +80,7 @@ const CharacterSheet = ({
           </div>
         </div>
         <div className="stat">
-          <div>CHA</div>
+          <div>{t("stats.cha")}</div>
           <div className="stat-value">{character.stats.cha}</div>
           <div>
             ({getModifier(character.stats.cha) >= 0 ? "+" : ""}
@@ -87,12 +91,14 @@ const CharacterSheet = ({
 
       {equipped.weapon && (
         <div className="character-info">
-          Weapon: {equipped.weapon.name} ({equipped.weapon.damage})
+          {t("characterSheet.weapon")}: {equipped.weapon.name} (
+          {equipped.weapon.damage})
         </div>
       )}
       {equipped.armor && (
         <div className="character-info">
-          Armor: {equipped.armor.name} (AC: {equipped.armor.ac})
+          {t("characterSheet.armor")}: {equipped.armor.name} (AC:{" "}
+          {equipped.armor.ac})
         </div>
       )}
 
@@ -110,7 +116,7 @@ const CharacterSheet = ({
           fontSize: "0.9rem",
         }}
       >
-        New Game
+        {t("characterSheet.newGame")}
       </button>
     </div>
   );

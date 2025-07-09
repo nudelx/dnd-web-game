@@ -1,11 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const SpellsSection = ({ showSpells, character, spellSlots, onCastSpell }) => {
+  const { t } = useTranslation();
+
   if (!showSpells || !character.spells) return null;
 
   return (
     <div className="spells-section">
-      <h3>Spells</h3>
+      <h3>{t("spells.title")}</h3>
       {character.spells.map((spell, index) => (
         <div key={index} className="spell-item">
           <button

@@ -1,0 +1,143 @@
+{
+  "title": "מבוכים ודרקונים: הרפתקה ברשת",
+  "characterCreation": {
+    "title": "צור את הדמות שלך",
+    "name": "שם:",
+    "namePlaceholder": "שם הגיבור שלך",
+    "class": "מקצוע:",
+    "race": "גזע:",
+    "beginAdventure": "התחל הרפתקה"
+  },
+  "characterSheet": {
+    "title": "גיליון דמות",
+    "level": "רמה",
+    "xp": "נק' ניסיון",
+    "hp": "נק' חיים",
+    "weapon": "נשק",
+    "armor": "שריון",
+    "newGame": "משחק חדש"
+  },
+  "adventure": {
+    "welcomeBack": "ברוך שובך, הרפתקן! המסע שלך נמשך...",
+    "welcome": "ברוך הבא, {{name}} ה{{race}} {{class}}!",
+    "entranceText": "אתה עומד בכניסה למבוך אפל ומסתורי. מה תעשה?",
+    "choices": {
+      "enterDungeon": "היכנס למבוך",
+      "checkEquipment": "בדוק את הציוד שלך",
+      "restRecover": "נוח והתאושש",
+      "viewSpells": "צפה בקסמים",
+      "continueExploring": "המשך לחקור",
+      "searchBody": "חפש בגופה",
+      "returnEntrance": "חזור לכניסה",
+      "attack": "תקוף",
+      "tryFlee": "נסה לברוח",
+      "castSpell": "הטל קסם",
+      "searchTreasure": "חפש אוצר",
+      "exploreFurther": "חקור הלאה",
+      "startNewGame": "התחל משחק חדש"
+    }
+  },
+  "combat": {
+    "title": "קרב",
+    "combatLog": "יומן קרב:",
+    "youHit": "אתה פוגע ב{{damage}} נזק!",
+    "criticalHit": "פגיעה קריטית! אתה גורם {{damage}} נזק!",
+    "youMiss": "אתה מחטיא! ({{total}} מול שריון {{ac}})",
+    "enemyHits": "{{enemy}} פוגע בך ב{{damage}} נזק!",
+    "enemyMisses": "{{enemy}} מחטיא!",
+    "youCast": "אתה מטיל {{spell}} וגורם {{damage}} נזק!",
+    "youCastHeal": "אתה מטיל {{spell}} ומרפא {{healing}} נק' חיים!",
+    "enemyDefeated": "אתה מכה ב{{enemy}} ב{{damage}} נזק ומביס אותו!",
+    "youGainXP": "אתה מרוויח {{xp}} נקודות ניסיון.",
+    "gameOver": "הובסת על ידי {{enemy}}! המשחק נגמר. ההרפתקה שלך מסתיימת כאן."
+  },
+  "spells": {
+    "title": "קסמים",
+    "availableSpells": "קסמים זמינים:",
+    "chooseSpell": "בחר קסם להטלה:",
+    "notEnoughSlots": "אין לך מספיק חריצים עבור {{spell}}.",
+    "spellCast": "אתה מטיל {{spell}}!",
+    "spellHeal": "אתה מטיל {{spell}} ומרפא {{healing}} נקודות חיים!"
+  },
+  "inventory": {
+    "title": "ציוד",
+    "yourEquipment": "הציוד שלך:",
+    "weaponNone": "נשק: אין",
+    "armorNone": "שריון: אין",
+    "inventoryItems": "פריטים בציוד:",
+    "equip": "צייד",
+    "use": "השתמש",
+    "closeInventory": "סגור ציוד",
+    "itemTypes": {
+      "weapon": "נזק: {{damage}}",
+      "armor": "שריון: {{ac}}",
+      "consumable": "צריכה"
+    }
+  },
+  "diceRoller": {
+    "title": "זריקת קוביה",
+    "result": "תוצאה: {{result}}",
+    "playMusic": "נגן מוזיקה",
+    "stopMusic": "עצור מוזיקה"
+  },
+  "enemies": {
+    "goblin": "גובלין",
+    "skeleton": "שלד",
+    "orc": "אורק",
+    "troll": "טרול",
+    "dragon": "דרקון"
+  },
+  "scenarios": {
+    "quietCorridor": "אתה נכנס למבוך ומוצא את עצמך במסדרון שקט. האוויר סמיך מאבק ומסתורין.",
+    "ancientLibrary": "אתה מגלה ספרייה עתיקה מלאה בכרכים מאובקים וידע נשכח.",
+    "treasureRoom": "אתה מוצא חדר אוצר עם זהב מנצנץ ואבנים יקרות מפוזרות.",
+    "peacefulShrine": "אתה נתקל במקדש שליו שבו תוכל לנוח ולהתאושש.",
+    "trainingRoom": "אתה מגלה חדר אימונים עם בובות אימון ורתמות נשק.",
+    "mysteriousPortal": "אתה מוצא שער מסתורי שמזמזם באנרגיה קסומה.",
+    "hiddenChamber": "אתה מגלה חדר נסתר עם רונות עתיקות חקוקות בקירות."
+  },
+  "encounters": {
+    "encounterEnemy": "אתה נכנס למבוך ונתקל ב{{enemy}}!",
+    "continueEncounter": "אתה ממשיך לחקור ונתקל ב{{enemy}}!",
+    "whatWillYouDo": "מה תעשה?",
+    "successfullyFlee": "אתה בורח בהצלחה מהאויב!",
+    "failToEscape": "אתה נכשל לברוח! האויב מקבל התקפה חופשית!",
+    "enemyFreeAttack": "האויב פוגע בך ב{{damage}} נזק!"
+  },
+  "treasure": {
+    "findTreasure": "אתה מוצא {{item}}!",
+    "findNothing": "אתה מחפש אבל לא מוצא שום דבר בעל ערך.",
+    "searchBodyFind": "אתה מחפש בגופה ומוצא {{item}}!",
+    "searchBodyNothing": "אתה מחפש בגופה אבל לא מוצא שום דבר בעל ערך."
+  },
+  "rest": {
+    "restRecover": "אתה נח ומתאושש {{amount}} נקודות חיים.",
+    "alreadyFullHealth": "אתה כבר בריא לחלוטין.",
+    "useItemHeal": "אתה משתמש ב{{item}} ומרפא {{healing}} נקודות חיים!",
+    "cantUseItem": "אתה לא יכול להשתמש ב{{item}} עכשיו."
+  },
+  "equipment": {
+    "equipWeapon": "אתה מצייד {{weapon}} ({{damage}} קוביות נזק).",
+    "equipArmor": "אתה מצייד {{armor}} (שריון: {{ac}}).",
+    "cannotEquip": "לא ניתן לצייד {{item}}."
+  },
+  "levelUp": {
+    "levelUp": "🎉 עליית רמה! אתה עכשיו רמה {{level}}!",
+    "hpIncrease": "+{{hp}} נק' חיים ({{old}} → {{new}})",
+    "feelStronger": "אתה מרגיש חזק יותר ומנוסה יותר!"
+  },
+  "stats": {
+    "str": "כוח",
+    "dex": "זריזות",
+    "con": "חוסן",
+    "int": "תבונה",
+    "wis": "חוכמה",
+    "cha": "כריזמה"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "language": "שפה",
+    "about": "אודות",
+    "description": "משחק רשת בסגנון מבוכים ודרקונים עם יצירת דמויות, קרב, קסמים והרפתקאות!"
+  }
+}

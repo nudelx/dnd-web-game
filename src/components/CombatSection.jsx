@@ -1,11 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CombatSection = ({ currentEnemy, combatLog }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       {combatLog.length > 0 && (
         <div className="combat-log">
-          <h4>Combat Log:</h4>
+          <h4>{t("combat.combatLog")}</h4>
           {combatLog.map((log, index) => (
             <div key={index} className="log-entry">
               {log}
@@ -16,7 +19,7 @@ const CombatSection = ({ currentEnemy, combatLog }) => {
 
       {currentEnemy && (
         <div className="combat-section">
-          <h3>Combat</h3>
+          <h3>{t("combat.title")}</h3>
           <div className="enemy">
             <h4>{currentEnemy.name}</h4>
             <div>AC: {currentEnemy.ac}</div>
@@ -29,7 +32,7 @@ const CombatSection = ({ currentEnemy, combatLog }) => {
               ></div>
             </div>
             <div>
-              HP: {currentEnemy.hp}/{currentEnemy.maxHp}
+              {t("characterSheet.hp")}: {currentEnemy.hp}/{currentEnemy.maxHp}
             </div>
           </div>
         </div>

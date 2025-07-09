@@ -693,3 +693,214 @@ body {
     max-height: 150px;
   }
 }
+
+/* Header and Language Switcher Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lang-btn {
+  padding: 0.5rem 0.8rem;
+  background: linear-gradient(145deg, #8b4513, #a0522d);
+  color: #f4e4c1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  font-family: "Georgia", serif;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn:hover {
+  background: linear-gradient(145deg, #a0522d, #cd853f);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lang-btn.active {
+  background: linear-gradient(145deg, #cd853f, #daa520);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* RTL support for Hebrew */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .character-creation input,
+[dir="rtl"] .character-creation select {
+  text-align: right;
+}
+
+[dir="rtl"] .adventure-text pre {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .combat-log {
+  text-align: right;
+}
+
+[dir="rtl"] .log-entry {
+  text-align: right;
+}
+
+[dir="rtl"] .inventory-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .item-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .equip-btn,
+[dir="rtl"] .use-btn {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .language-switcher {
+    justify-content: center;
+  }
+}
+
+/* Settings Modal Styles */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.settings-modal {
+  background: linear-gradient(145deg, #3d2a1a 0%, #2a1a0f 100%);
+  border: 2px solid #8b4513;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #8b4513;
+  padding-bottom: 1rem;
+}
+
+.settings-header h3 {
+  color: #ffd700;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-settings-btn {
+  background: none;
+  border: none;
+  color: #f4e4c1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.close-settings-btn:hover {
+  background: rgba(139, 69, 19, 0.3);
+  color: #ffd700;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settings-section {
+  background: rgba(139, 69, 19, 0.2);
+  border: 1px solid #8b4513;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.settings-section h4 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.settings-section p {
+  color: #f4e4c1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.settings-btn {
+  padding: 0.5rem;
+  background: transparent;
+  color: #f4e4c1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-btn:hover {
+  background: rgba(139, 69, 19, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* RTL support for settings */
+[dir="rtl"] .settings-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .settings-section {
+  text-align: right;
+}

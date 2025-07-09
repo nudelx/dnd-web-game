@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CharacterCreation = ({
   name,
@@ -11,19 +12,21 @@ const CharacterCreation = ({
   RACES,
   onStartAdventure,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="character-creation">
-      <h2>Create Your Character</h2>
+      <h2>{t("characterCreation.title")}</h2>
       <label>
-        Name:
+        {t("characterCreation.name")}
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Your hero's name"
+          placeholder={t("characterCreation.namePlaceholder")}
         />
       </label>
       <label>
-        Class:
+        {t("characterCreation.class")}
         <select
           value={charClass}
           onChange={(e) => setCharClass(e.target.value)}
@@ -34,7 +37,7 @@ const CharacterCreation = ({
         </select>
       </label>
       <label>
-        Race:
+        {t("characterCreation.race")}
         <select value={race} onChange={(e) => setRace(e.target.value)}>
           {RACES.map((r) => (
             <option key={r}>{r}</option>
@@ -42,7 +45,7 @@ const CharacterCreation = ({
         </select>
       </label>
       <button disabled={!name} onClick={onStartAdventure}>
-        Begin Adventure
+        {t("characterCreation.beginAdventure")}
       </button>
     </div>
   );

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./App.css";
 import { CLASSES, RACES } from "./const/classes";
 import { rollDice } from "./functions/utils";
@@ -12,9 +13,20 @@ import SpellsSection from "./components/SpellsSection";
 import InventorySection from "./components/InventorySection";
 import DiceRoller from "./components/DiceRoller";
 import AdventureContent from "./components/AdventureContent";
+import Settings from "./components/Settings";
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [diceResult, setDiceResult] = useState(null);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  // Handle RTL languages
+  useEffect(() => {
+    const currentLang = i18n.language;
+    const isRTL = currentLang === "he";
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    document.documentElement.lang = currentLang;
+  }, [i18n.language]);
 
   const gameState = useGameState();
   const musicHook = useMusic();
@@ -55,7 +67,16 @@ function App() {
 
   return (
     <div className="dnd-container">
-      <h1 className="dnd-title">Dungeons & Dragons: Web Adventure</h1>
+      <div className="header">
+        <h1 className="dnd-title">{t("title")}</h1>
+        <button
+          className="settings-btn"
+          onClick={() => setIsSettingsOpen(true)}
+          title={t("settings.title")}
+        >
+          ⚙️
+        </button>
+      </div>
 
       {step === "create" && (
         <CharacterCreation
@@ -113,6 +134,11 @@ function App() {
           </div>
         </div>
       )}
+
+      <Settings
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+      />
     </div>
   );
 }

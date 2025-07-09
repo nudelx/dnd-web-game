@@ -1,0 +1,143 @@
+{
+  "title": "Dungeons & Dragons: Web Adventure",
+  "characterCreation": {
+    "title": "Create Your Character",
+    "name": "Name:",
+    "namePlaceholder": "Your hero's name",
+    "class": "Class:",
+    "race": "Race:",
+    "beginAdventure": "Begin Adventure"
+  },
+  "characterSheet": {
+    "title": "Character Sheet",
+    "level": "Level",
+    "xp": "XP",
+    "hp": "HP",
+    "weapon": "Weapon",
+    "armor": "Armor",
+    "newGame": "New Game"
+  },
+  "adventure": {
+    "welcomeBack": "Welcome back, adventurer! Your journey continues...",
+    "welcome": "Welcome, {{name}} the {{race}} {{class}}!",
+    "entranceText": "You stand at the entrance to a dark, mysterious dungeon. What will you do?",
+    "choices": {
+      "enterDungeon": "Enter the dungeon",
+      "checkEquipment": "Check your equipment",
+      "restRecover": "Rest and recover",
+      "viewSpells": "View spells",
+      "continueExploring": "Continue exploring",
+      "searchBody": "Search the body",
+      "returnEntrance": "Return to entrance",
+      "attack": "Attack",
+      "tryFlee": "Try to flee",
+      "castSpell": "Cast spell",
+      "searchTreasure": "Search for treasure",
+      "exploreFurther": "Explore further",
+      "startNewGame": "Start New Game"
+    }
+  },
+  "combat": {
+    "title": "Combat",
+    "combatLog": "Combat Log:",
+    "youHit": "You hit for {{damage}} damage!",
+    "criticalHit": "CRITICAL HIT! You deal {{damage}} damage!",
+    "youMiss": "You miss! ({{total}} vs AC {{ac}})",
+    "enemyHits": "{{enemy}} hits you for {{damage}} damage!",
+    "enemyMisses": "{{enemy}} misses you!",
+    "youCast": "You cast {{spell}} for {{damage}} damage!",
+    "youCastHeal": "You cast {{spell}} and heal {{healing}} HP!",
+    "enemyDefeated": "You strike the {{enemy}} for {{damage}} damage and defeat it!",
+    "youGainXP": "You gain {{xp}} experience points.",
+    "gameOver": "You have been defeated by the {{enemy}}! Game Over. Your adventure ends here."
+  },
+  "spells": {
+    "title": "Spells",
+    "availableSpells": "Available spells:",
+    "chooseSpell": "Choose a spell to cast:",
+    "notEnoughSlots": "You don't have enough spell slots for {{spell}}.",
+    "spellCast": "You cast {{spell}}!",
+    "spellHeal": "You cast {{spell}} and heal {{healing}} hit points!"
+  },
+  "inventory": {
+    "title": "Inventory",
+    "yourEquipment": "Your equipment:",
+    "weaponNone": "Weapon: None",
+    "armorNone": "Armor: None",
+    "inventoryItems": "Inventory items:",
+    "equip": "Equip",
+    "use": "Use",
+    "closeInventory": "Close Inventory",
+    "itemTypes": {
+      "weapon": "Damage: {{damage}}",
+      "armor": "AC: {{ac}}",
+      "consumable": "Consumable"
+    }
+  },
+  "diceRoller": {
+    "title": "Dice Roller",
+    "result": "Result: {{result}}",
+    "playMusic": "Play Music",
+    "stopMusic": "Stop Music"
+  },
+  "enemies": {
+    "goblin": "Goblin",
+    "skeleton": "Skeleton",
+    "orc": "Orc",
+    "troll": "Troll",
+    "dragon": "Dragon"
+  },
+  "scenarios": {
+    "quietCorridor": "You enter the dungeon and find yourself in a quiet corridor. The air is thick with dust and mystery.",
+    "ancientLibrary": "You discover an ancient library filled with dusty tomes and forgotten knowledge.",
+    "treasureRoom": "You find a treasure room with glittering gold and precious gems scattered about.",
+    "peacefulShrine": "You encounter a peaceful shrine where you can rest and recover your strength.",
+    "trainingRoom": "You discover a training room with practice dummies and weapon racks.",
+    "mysteriousPortal": "You find a mysterious portal that hums with arcane energy.",
+    "hiddenChamber": "You discover a hidden chamber with ancient runes carved into the walls."
+  },
+  "encounters": {
+    "encounterEnemy": "You enter the dungeon and encounter a {{enemy}}!",
+    "continueEncounter": "You continue exploring and encounter a {{enemy}}!",
+    "whatWillYouDo": "What will you do?",
+    "successfullyFlee": "You successfully flee from the enemy!",
+    "failToEscape": "You fail to escape! The enemy gets a free attack!",
+    "enemyFreeAttack": "Enemy hits you for {{damage}} damage!"
+  },
+  "treasure": {
+    "findTreasure": "You find {{item}}!",
+    "findNothing": "You search but find nothing of value.",
+    "searchBodyFind": "You search the body and find {{item}}!",
+    "searchBodyNothing": "You search the body but find nothing of value."
+  },
+  "rest": {
+    "restRecover": "You rest and recover {{amount}} hit points.",
+    "alreadyFullHealth": "You are already at full health.",
+    "useItemHeal": "You use {{item}} and heal {{healing}} hit points!",
+    "cantUseItem": "You can't use {{item}} right now."
+  },
+  "equipment": {
+    "equipWeapon": "You equip {{weapon}} ({{damage}} damage dice).",
+    "equipArmor": "You equip {{armor}} (AC: {{ac}}).",
+    "cannotEquip": "{{item}} cannot be equipped."
+  },
+  "levelUp": {
+    "levelUp": "🎉 LEVEL UP! You are now level {{level}}!",
+    "hpIncrease": "+{{hp}} HP ({{old}} → {{new}})",
+    "feelStronger": "You feel stronger and more experienced!"
+  },
+  "stats": {
+    "str": "STR",
+    "dex": "DEX",
+    "con": "CON",
+    "int": "INT",
+    "wis": "WIS",
+    "cha": "CHA"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "about": "About",
+    "description": "A Dungeons & Dragons web game with character creation, combat, spells, and adventure!"
+  }
+}

@@ -5,8 +5,10 @@ import {
   checkLevelUp,
 } from "../functions/utils";
 import { EQUIPMENT } from "../const/equipment";
+import { useTranslation } from "react-i18next";
 
 export const useAdventure = (gameState, musicHook) => {
+  const { t } = useTranslation();
   const {
     character,
     setCharacter,
@@ -39,9 +41,13 @@ export const useAdventure = (gameState, musicHook) => {
         const newHp = newMaxHp; // Full heal on level up
 
         setLevelUpMessage(
-          `🎉 LEVEL UP! You are now level ${newLevel}!\n` +
-            `+${hpIncrease} HP (${prev.maxHp} → ${newMaxHp})\n` +
-            `You feel stronger and more experienced!`
+          `${t("levelUp.levelUp", { level: newLevel })}\n` +
+            `${t("levelUp.hpIncrease", {
+              hp: hpIncrease,
+              old: prev.maxHp,
+              new: newMaxHp,
+            })}\n` +
+            `${t("levelUp.feelStronger")}`
         );
 
         return {
@@ -80,7 +86,7 @@ export const useAdventure = (gameState, musicHook) => {
           hp: newEnemyHp,
         }));
 
-        addCombatLog(`You cast ${spell.name} for ${damage} damage!`);
+        addCombatLog(t("combat.youCast", { spell: spell.name, damage }));
 
         if (newEnemyHp <= 0) {
           const xpGain = currentEnemy.level || 10;
@@ -111,7 +117,7 @@ export const useAdventure = (gameState, musicHook) => {
           ...prev,
           hp: newHp,
         }));
-        addCombatLog(`You cast ${spell.name} and heal ${healing} HP!`);
+        addCombatLog(t("combat.youCastHeal", { spell: spell.name, healing }));
         setAdventureText(
           `You cast ${spell.name} and heal ${healing} hit points!\n\nCurrent HP: ${newHp}/${character.maxHp}`
         );

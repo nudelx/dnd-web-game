@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const DiceRoller = ({
   diceResult,
@@ -6,9 +7,11 @@ const DiceRoller = ({
   isMusicPlaying,
   onToggleMusic,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="dice-roller">
-      <h3>Dice Roller</h3>
+      <h3>{t("diceRoller.title")}</h3>
       <div className="dice-buttons">
         <button className="dice-btn" onClick={() => onRollDice(20)}>
           d20
@@ -30,7 +33,9 @@ const DiceRoller = ({
         </button>
       </div>
       {diceResult !== null && (
-        <div className="dice-result">Result: {diceResult}</div>
+        <div className="dice-result">
+          {t("diceRoller.result", { result: diceResult })}
+        </div>
       )}
 
       <div
@@ -55,7 +60,11 @@ const DiceRoller = ({
           }}
         >
           <span>{isMusicPlaying ? "🔇" : "🎵"}</span>
-          <span>{isMusicPlaying ? "Stop Music" : "Play Music"}</span>
+          <span>
+            {isMusicPlaying
+              ? t("diceRoller.stopMusic")
+              : t("diceRoller.playMusic")}
+          </span>
         </button>
       </div>
     </div>
